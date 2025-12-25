@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FELIZ NAVIDAD MI NIÑA PECHOCHA 🥹💗</title>
+
+<style>
+body{
+margin:0;
+overflow:hidden;
+font-family:'Arial', sans-serif;
+background:radial-gradient(circle at top, #1b0033, #000);
+color:#ffe6f7;
+text-align:center;
+}
+
+.container{
+position:relative;
+z-index:5;
+padding:20px;
+}
+
+h1{
+font-size:2.4rem;
+text-shadow:0 0 20px #ff7ad9;
+}
+
+p{
+font-size:1.2rem;
+margin:12px;
+}
+
+/* Árbol */
+.tree{
+font-size:6rem;
+animation:sway 3s ease-in-out infinite;
+margin:10px 0;
+}
+
+@keyframes sway{
+0%{transform:rotate(-2deg);}
+50%{transform:rotate(2deg);}
+100%{transform:rotate(-2deg);}
+}
+
+/* Nieve */
+.snow{
+position:fixed;
+top:-10px;
+color:white;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+to{transform:translateY(110vh);}
+}
+
+/* Corazones */
+.heart{
+position:fixed;
+bottom:-20px;
+color:#ff4fa3;
+animation:float 10s linear infinite;
+}
+
+@keyframes float{
+to{transform:translateY(-120vh);}
+}
+
+/* Fuegos artificiales */
+.firework{
+position:fixed;
+width:6px;
+height:6px;
+background:#fff;
+border-radius:50%;
+animation:explode 1.5s ease-out forwards;
+}
+
+@keyframes explode{
+to{
+transform:scale(20);
+opacity:0;
+}
+}
+
+/* Brillo */
+.glow{
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 10px pink;}
+to{text-shadow:0 0 25px #ff9de2;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="glow">🎄 Feliz Navidad mi niña pechocha 🥹💗 🎄</h1>
+
+<div class="tree">🎄✨</div>
+
+<p>
+Desde que llegaste a mi vida, todo se siente más bonito,  
+más tranquilo y más real.  
+Tu sonrisa ilumina mis días y tu amor  
+es mi lugar favorito 💖
+</p>
+
+<p>
+Gracias por ser tú, por quererme como lo haces  
+y por hacerme sentir especial cada día.  
+No tienes idea de lo importante que eres para mí 🥹✨
+</p>
+
+<p>
+Te amo muchoo, más de lo que puedo explicar con palabras,  
+y prometo cuidarte, respetarte y elegirte  
+todos los días de mi vida ♾️💞
+</p>
+
+<p class="glow">💗🎆✨</p>
+
+<p>
+De: <b>tu bebeshito 🥹💗</b><br>
+Para: <b>tii mi bebeee 😘💕</b>
+</p>
+
+</div>
+
+<audio autoplay loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3">
+</audio>
+
+<script>
+// Nieve
+for(let i=0;i<40;i++){
+let s=document.createElement("div");
+s.className="snow";
+s.innerHTML="❄️";
+s.style.left=Math.random()*100+"vw";
+s.style.fontSize=Math.random()*20+10+"px";
+s.style.animationDuration=Math.random()*5+5+"s";
+document.body.appendChild(s);
+}
+
+// Corazones
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="💖";
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=Math.random()*25+15+"px";
+h.style.animationDuration=Math.random()*5+5+"s";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),10000);
+},700);
+
+// Fuegos artificiales
+setInterval(()=>{
+let f=document.createElement("div");
+f.className="firework";
+f.style.left=Math.random()*100+"vw";
+f.style.top=Math.random()*60+"vh";
+document.body.appendChild(f);
+setTimeout(()=>f.remove(),1500);
+},2500);
+</script>
+
+</body>
+</html>
